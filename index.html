@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="favicon.ico">
     <title>Tic Tac Toe</title>
@@ -10,10 +13,31 @@
 <body>
     <div class="game">
         <h1>Tic Tac Toe</h1>
-        <div class="screen"></div>
-        <div class="state"><div>
-        <div class="restart"></div>
-        <h6 id="sign"></h6>
+        <div class="screen">
+            <h5 id="roundState">Your Turn</h5>
+            <div class="grid">
+                <button id="b11"></button>
+                <button id="b12"></button>
+                <button id="b13"></button>
+
+                <button id="b21"></button>
+                <button id="b22"></button>
+                <button id="b23"></button>
+
+                <button id="b31"></button>
+                <button id="b32"></button>
+                <button id="b33"></button>
+            </div>
+        </div>
+        <div class="state">
+            <h4 id="win">Test <br> 00</h4>
+            <h4 id="tie">Test <br> 00</h4>
+            <h4 id="lose">Test <br> 00</h4>
+        </div>
+        <div class="restart">
+            <button id="restart">Restart</button>
+            <h6 id="sign">BY Pokachu</h6>
+        </div>
     </div>
 </body>
 </html>
