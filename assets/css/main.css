@@ -39,11 +39,34 @@ body {
     flex-direction: column;
     align-items: center;
     border: .25rem solid #3D036D;
+    flex-grow: 1;
 }
 .screen h5 {
     margin: 1rem 1rem .5rem 1rem;
     font-size: 1.5rem;
     color: #2E3244;
+    font-weight: 400;
+}
+/*grid section*/
+.grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 95%;
+    padding: 0 1rem .5rem 1rem;
+    gap: .5rem;
+}
+.grid button {
+    border-radius: 2rem;
+    border: .2rem solid #3D036D;
+    cursor: pointer;
+    transition: .2s;
+}
+.grid img {
+    height: 100%;
+    width: 100%;
+    opacity: 60%;
+    transition: .2s;
 }
 /*state section*/
 .state {
@@ -82,6 +105,13 @@ button#restart {
     border-radius: 2rem;
     padding: .3rem 3rem;
     margin: .25rem 1rem;
+    transition: .2s;
+    cursor: pointer;
+}
+button#restart:hover {
+    background-color: #EFB2F8;
+    border-color: #3D036D;
+    color: #3D036D;
 }
 .restart h6 {
     font-size: 1.2rem;
@@ -89,3 +119,4 @@ button#restart {
     color: rgba(255, 255, 255, 0.419);
     font-weight: 400;
 }
+
