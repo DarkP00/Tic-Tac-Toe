@@ -18,10 +18,12 @@ let sts;
 
 [board, win, tie, lose, turn, sts] = intialize(board, win, lose, tie, turn, sts)
 uiUpdate(board, win, lose, tie, turn, sts)
+console.log(board)
 
 document.getElementById("a1").addEventListener("click", () => {
-  move = 0
+  move = Number(0)
   [board, win, lose, tie, turn, sts] = playerCo(board, win, lose, tie, turn, sts, move)
+  console.log(`${board}, ${win}, ${lose}, ${tie}, ${turn}, ${sts}, ${move}`)
   uiUpdate(board, win, lose, tie, turn, sts)
 });
 document.getElementById("a2").addEventListener("click", () => {

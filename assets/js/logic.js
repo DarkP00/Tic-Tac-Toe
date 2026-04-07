@@ -4,7 +4,7 @@ function intialize(board, win, tie, lose, turn, sts){
     tie = 0;
     sts = 0;
     turn = "Yours";
-    board = ["", "", "", "", "", "", "", "", ""];
+    board = ["E", "E", "E", "E", "E", "E", "E", "E", "E"];
     return [board, win, tie, lose, turn, sts];
 }
 function uiUpdate(board, win, tie, lose, turn, sts){
@@ -24,9 +24,7 @@ function uiUpdate(board, win, tie, lose, turn, sts){
         document.getElementById("roundState").innerText = `${turn} Turn!`;}
     }
 function isValid(board, move){
-    console.log(move)
-    console.log(board[move])
-    if (board[move] === ""){
+    if (board[move] === "E"){
         return true
         console.log("case 1")
     } 
@@ -44,7 +42,7 @@ function isWin(board, turn) {
 }
 function isDraw(board){
     console.log("draw cehcked")
-    return (!board.some(cell => cell === ""))
+    return (!board.some(cell => cell === "E"))
 }
 function playerSwitch(turn){
     if  (turn === "Yours"){
@@ -70,7 +68,7 @@ function reset(board, win, lose, tie, turn, sts){
 }
 function replay(board, win, lose, tie, turn, sts){
     turn = "Yours";
-    board = ["", "", "", "", "", "", "", "", ""];
+    board = ["E", "E", "E", "E", "E", "E", "E", "E", "E"];
     sts = 0;
     console.log("replay")
     return [board, win, lose, tie, turn, sts]
@@ -93,30 +91,35 @@ function playerCo(board, win, lose, tie, turn, sts, move){
         return [board, win, lose, tie, turn, sts]
     }
     else{
+        console.log("Case 3")
         board[move] = "X"
     }
     if (isWin(board, turn)){
         sts = 1;
         win += 1;
+        console.log("winched")
         return [board, win, lose, tie, turn, sts]
     }
     if (isDraw(board)){
         sts = 3;
         tie += 1;
+        console.log("drawchecked")
         return [board, win, lose, tie, turn, sts]
     }
     turn = playerSwitch(turn)
-    board = compMove(board)
-    if (isWin(board, turn)){
-        sts = 2;
-        lose += 1;
-        return [board, win, lose, tie, turn, sts]
-    }
-    if (isDraw(board)){
-        sts = 3;
-        tie += 1;
-        return [board, win, lose, tie, turn, sts]
-    }
+    console.log(turn)
+//    board = compMove(board)
+//    if (isWin(board, turn)){
+//        sts = 2;
+//        lose += 1;
+//       return [board, win, lose, tie, turn, sts]
+//    }
+//    if (isDraw(board)){
+//        sts = 3;
+//        tie += 1;
+//        return [board, win, lose, tie, turn, sts]
+//    }
+    console.log(`${board}, ${win}, ${lose}, ${tie}, ${turn}, ${sts}, ${move}`)
     playerSwitch(turn)
     return [board, win, lose, tie, turn, sts]
 }
