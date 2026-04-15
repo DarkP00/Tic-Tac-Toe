@@ -16,17 +16,26 @@
         <div class="screen">
             <h5 id="roundState">Your Turn!</h5>
             <div class="grid">
-                <button id="a1"><img id="i0"></button>
-                <button id="a2"><img id="i1"></button>
-                <button id="a3"><img id="i2"></button>
+                <button id="a1" onclick="
+                    main(0);"><img id="i0"></button>
+                <button id="a2" onclick="
+                    main(1);"><img id="i1"></button>
+                <button id="a3" onclick="
+                    main(2);"><img id="i2"></button>
 
-                <button id="b1"><img  id="i3"></button>
-                <button id="b2"><img  id="i4"></button>
-                <button id="b3"><img  id="i5"></button>
+                <button id="b1" onclick="
+                    main(3);"><img  id="i3"></button>
+                <button id="b2" onclick="
+                    main(4);"><img  id="i4"></button>
+                <button id="b3" onclick="
+                    main(5);"><img  id="i5"></button>
 
-                <button id="c1"><img  id="i6"></button>
-                <button id="c2"><img  id="i7"></button>
-                <button id="c3"><img  id="i8"></button>
+                <button id="c1" onclick="
+                    main(6);"><img  id="i6"></button>
+                <button id="c2" onclick="
+                    main(7);"><img  id="i7"></button>
+                <button id="c3" onclick="
+                    main(8);"><img  id="i8"></button>
             </div>
         </div>
         <div class="state">
@@ -35,12 +44,16 @@
             <h4 id="lose">Lose<br>0</h4>
         </div>
         <div class="restart">
-            <button id="replay">Replay</button>
-            <button id="restart">Restart</button>
+            <button id="replay" onclick="
+                rePlay();
+            ">Replay</button>
+            <button id="restart" onclick="
+                reSet();
+            ">Restart</button>
             <h6 id="sign">BY Pokachu</h6>
         </div>
     </div>
-    <script src="/assets/js/logic.js"></script>
-    <script src="/assets/js/load.js"></script>
+    <script src="/assets/js/load2.js"></script>
+    <script src="/assets/js/logic2.js"></script>
 </body>
 </html>
