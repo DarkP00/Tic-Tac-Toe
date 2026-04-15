@@ -47,7 +47,7 @@ function isWin(board, turn) {
     } else {
         player = "O";
     }
-    return winCond.some(combo => combo.every(index => board[index] === player));
+    return winCond.some(combo => combo.every(index => board[index] === "X"));
 }
 
 function isDraw(board){

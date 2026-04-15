@@ -8,6 +8,7 @@ function main(move){
         scoreSave();
         end = 1;
         uiLoad();
+        frezzBoard()
         return board;
     }
     if(isDraw()){
@@ -15,6 +16,7 @@ function main(move){
         scoreSave();
         end = 3;
         uiLoad();
+        frezzBoard()
         return board;
     }
     compMove();
@@ -23,6 +25,7 @@ function main(move){
         scoreSave();
         end = 2;
         uiLoad();
+        frezzBoard()
         return board;
     }
     if(isDraw()){
@@ -30,6 +33,7 @@ function main(move){
         scoreSave();
         end = 3;
         uiLoad();
+        frezzBoard()
         return board;
     }
     uiLoad()
@@ -74,4 +78,11 @@ function compMove(){
     }
     isValid(4) ? board[4] = "O" : board[move] = "O";
     return board
+}
+function frezzBoard(){
+    for(i = 0; i < 9; i++){
+        if(board[i]===""){
+            board[i]="E"
+        }
+    }
 }
