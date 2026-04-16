@@ -61,13 +61,13 @@ function compMove(){
             continue;
         }
         move = i;
-        board[i] = "O"
-        if(isWin("O")){
+        board[i] = "X"
+        if(isWin("X")){
             board[i] = "O";
             factor = i;
         }
-        board[i] = "X"
-        if(isWin("X")){
+        board[i] = "O"
+        if(isWin("O")){
             board[i] = "O";
             factor = i;
         }
